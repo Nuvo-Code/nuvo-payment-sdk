@@ -2,14 +2,33 @@
   "name": "nuvocode/nuvo-payment-sdk",
   "description": "PHP SDK for Nuvo Payment API",
   "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nuvo Code",
+      "email": "info@nuvocode.com"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "NuvoPayment\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "NuvoPayment\\Tests\\": "tests/"
     }
   },
   "require": {
     "php": ">=8.1",
     "guzzlehttp/guzzle": "^7.0",
     "vlucas/phpdotenv": "^5.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit --colors=always",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
   }
 }
